@@ -186,7 +186,7 @@ export default function LpEfficiencyPage() {
           <p className="mt-3 text-center text-sm text-muted">
             以下のフォームにご記入ください。2営業日以内にご連絡いたします。
           </p>
-          <div className="mt-8">
+          <div className="mt-8 bg-white rounded-xl shadow-sm border border-border p-6 sm:p-10">
             <ContactForm source="lp-efficiency" variant="simple" />
           </div>
         </Container>

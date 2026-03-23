@@ -41,9 +41,12 @@ export default function LpAiPage() {
             Copilot、ChatGPT、Google AI...
             ツールはある。でも業務は変わっていない。その原因と解決策をお伝えします。
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button as="a" href="#form" size="lg" className="w-full sm:w-auto">
               無料で相談する（3分）
+            </Button>
+            <Button as="a" href="/diagnosis" variant="secondary" size="lg" className="w-full sm:w-auto">
+              AI活用診断を受ける
             </Button>
           </div>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-muted">
@@ -208,7 +211,7 @@ export default function LpAiPage() {
           <p className="mt-3 text-center text-sm text-muted">
             以下のフォームにご記入ください。2営業日以内にご連絡いたします。
           </p>
-          <div className="mt-8">
+          <div className="mt-8 bg-white rounded-xl shadow-sm border border-border p-6 sm:p-10">
             <ContactForm source="lp-ai" variant="full" />
           </div>
         </Container>

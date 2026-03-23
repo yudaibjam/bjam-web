@@ -169,8 +169,8 @@ export default function DiagnosisFlow() {
 
         <div className="mb-8 border-t border-[#e2e8f0]" />
 
-        <div className="text-center">
-          <h3 className="mb-6 text-lg font-bold text-[#1a1a2e] sm:text-xl">
+        <div>
+          <h3 className="mb-6 text-center text-lg font-bold text-[#1a1a2e] sm:text-xl">
             詳しいアドバイスをお送りします
           </h3>
           <ContactForm source="diagnosis" variant="full" />
