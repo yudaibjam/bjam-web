@@ -16,7 +16,7 @@ export default function Hero() {
               ツールは導入した。でも業務は変わっていない——そんな企業に、実装から定着まで伴走します。
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button as="a" href="#contact" variant="primary" size="lg">
+              <Button as="a" href="/diagnosis" variant="primary" size="lg">
                 無料AI活用診断を受ける
               </Button>
               <Button as="a" href="#services" variant="secondary" size="lg">

@@ -19,7 +19,7 @@ export default function CTASection() {
               無料相談する
             </a>
             <a
-              href="/contact"
+              href="/diagnosis"
               className="inline-flex items-center justify-center font-medium rounded-lg transition-colors duration-200 px-8 py-4 text-lg border-2 border-white text-white hover:bg-white/10"
             >
               AI活用診断を受ける

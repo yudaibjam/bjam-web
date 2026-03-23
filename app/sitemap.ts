@@ -9,6 +9,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: "https://b-jam.co.jp/diagnosis",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: "https://b-jam.co.jp/contact",
       lastModified: new Date(),
       changeFrequency: "monthly",

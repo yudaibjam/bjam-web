@@ -24,7 +24,7 @@ export default function LpAiPage() {
             <Image src="/images/ロゴ.png" alt="b-jam" width={80} height={26} className="h-7 w-auto" />
           </Link>
           <Button as="a" href="#form" size="sm">
-            無料AI活用診断
+            無料で相談する
           </Button>
         </Container>
       </header>
@@ -43,7 +43,7 @@ export default function LpAiPage() {
           </p>
           <div className="mt-8">
             <Button as="a" href="#form" size="lg" className="w-full sm:w-auto">
-              無料AI活用診断に申し込む（3分）
+              無料で相談する（3分）
             </Button>
           </div>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-muted">
@@ -203,7 +203,7 @@ export default function LpAiPage() {
       <section id="form" className="py-16 md:py-20">
         <Container className="mx-auto max-w-2xl">
           <h2 className="text-center text-xl font-bold text-foreground md:text-2xl">
-            無料AI活用診断に申し込む
+            無料で相談する
           </h2>
           <p className="mt-3 text-center text-sm text-muted">
             以下のフォームにご記入ください。2営業日以内にご連絡いたします。
@@ -254,7 +254,7 @@ export default function LpAiPage() {
           </p>
           <div className="mt-6">
             <Button as="a" href="#form" size="lg" className="w-full sm:w-auto">
-              無料AI活用診断に申し込む
+              無料で相談する
             </Button>
           </div>
         </Container>
@@ -273,7 +273,7 @@ export default function LpAiPage() {
       {/* ── Sticky Mobile CTA ── */}
       <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-white p-3 md:hidden">
         <Button as="a" href="#form" size="lg" className="w-full">
-          無料AI活用診断に申し込む
+          無料で相談する
         </Button>
       </div>
     </div>

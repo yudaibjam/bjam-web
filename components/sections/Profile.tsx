@@ -3,7 +3,7 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const experiences = [
-  "BizMake SaaS 企画・立ち上げ（300+プロジェクト支援）",
+  "300+プロジェクトの支援実績",
   "株式会社bridge マネージングディレクター",
   "AI業務自動化の仕組み設計・構築",
 ];
