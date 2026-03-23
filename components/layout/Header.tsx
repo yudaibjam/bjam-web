@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu } from "lucide-react";
 import MobileMenu from "./MobileMenu";
 
@@ -20,11 +21,15 @@ export default function Header() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link
-              href="/"
-              className="text-2xl font-bold text-primary hover:text-primary-dark transition-colors"
-            >
-              b-jam
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/ロゴ.png"
+                alt="b-jam"
+                width={100}
+                height={32}
+                className="h-8 w-auto"
+                priority
+              />
             </Link>
 
             {/* Desktop navigation */}

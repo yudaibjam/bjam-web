@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | 株式会社b-jam",
   },
   description:
-    "AIツールを導入しただけで終わっていませんか？b-jamは御社の環境で業務が変わる仕組みを設計・構築し、定着まで伴走します。プロジェクト支援200件超の実績。",
+    "AIツールを導入しただけで終わっていませんか？b-jamは御社の環境で業務が変わる仕組みを設計・構築し、定着まで伴走します。プロジェクト支援300件超の実績。",
   metadataBase: new URL("https://b-jam.co.jp"),
   openGraph: {
     title: "株式会社b-jam | AIを使えるに変える。業務が変わる。",

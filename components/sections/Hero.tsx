@@ -1,4 +1,4 @@
-import { Briefcase, Zap, FileText } from "lucide-react";
+import { Briefcase, Zap } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 
@@ -10,9 +10,7 @@ export default function Hero() {
           {/* Text */}
           <div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-              AIを&ldquo;使える&rdquo;に変える。
-              <br />
-              業務が変わる。
+              AIを&ldquo;使える&rdquo;に変える。業務が変わる。
             </h1>
             <p className="mt-6 text-lg text-muted leading-relaxed max-w-prose">
               ツールは導入した。でも業務は変わっていない——そんな企業に、実装から定着まで伴走します。
@@ -30,15 +28,11 @@ export default function Hero() {
             <div className="mt-10 flex flex-wrap gap-6 text-sm text-muted">
               <span className="flex items-center gap-2">
                 <Briefcase className="h-5 w-5 text-primary" />
-                プロジェクト支援 200件超
+                プロジェクト支援 300件超
               </span>
               <span className="flex items-center gap-2">
                 <Zap className="h-5 w-5 text-primary" />
-                AI自動化パイプライン構築実績
-              </span>
-              <span className="flex items-center gap-2">
-                <FileText className="h-5 w-5 text-primary" />
-                BizZine・ProductZine 連載
+                AI業務自動化の構築実績
               </span>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
@@ -19,8 +20,8 @@ export default function LpAiPage() {
       {/* ── Simple Header ── */}
       <header className="sticky top-0 z-50 border-b border-border bg-white">
         <Container className="flex items-center justify-between py-3">
-          <Link href="/" className="text-xl font-bold text-primary">
-            b-jam
+          <Link href="/" className="flex items-center">
+            <Image src="/images/ロゴ.png" alt="b-jam" width={80} height={26} className="h-7 w-auto" />
           </Link>
           <Button as="a" href="#form" size="sm">
             無料AI活用診断
@@ -48,11 +49,11 @@ export default function LpAiPage() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-muted">
             <span className="flex items-center gap-1.5">
               <CheckCircle className="h-4 w-4 text-primary" />
-              プロジェクト支援200件超
+              プロジェクト支援300件超
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle className="h-4 w-4 text-primary" />
-              AI自動化パイプライン構築実績
+              AI業務自動化の構築実績
             </span>
           </div>
         </Container>
@@ -137,8 +138,8 @@ export default function LpAiPage() {
           </h2>
           <div className="mx-auto mt-10 grid max-w-3xl gap-6 sm:grid-cols-2">
             {[
-              "自ら業務をAI自動化した実績",
-              "200+プロジェクトの課題パターン知識",
+              "多数の業務をAI自動化してきた実績",
+              "300+プロジェクトの課題パターン知識",
               "ツールを売らない環境非依存",
               "仕組みを作って納品する実装力",
             ].map((point) => (
@@ -157,17 +158,11 @@ export default function LpAiPage() {
       {/* ── Results ── */}
       <section className="py-16 md:py-20">
         <Container>
-          <div className="mx-auto grid max-w-3xl gap-6 text-center sm:grid-cols-3">
-            {[
-              { value: "200+", label: "プロジェクト支援" },
-              { value: "23→781件", label: "アイデア拡張実績" },
-              { value: "BizZine", label: "連載実績" },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <p className="text-3xl font-bold text-primary">{stat.value}</p>
-                <p className="mt-1 text-sm text-muted">{stat.label}</p>
-              </div>
-            ))}
+          <div className="mx-auto flex justify-center text-center">
+            <div>
+              <p className="text-5xl font-bold text-primary">300+</p>
+              <p className="mt-2 text-base text-muted">プロジェクト支援実績</p>
+            </div>
           </div>
           <div className="mx-auto mt-12 grid max-w-3xl gap-6 sm:grid-cols-2">
             <div className="rounded-lg border border-border p-6">
@@ -182,10 +177,10 @@ export default function LpAiPage() {
             <div className="rounded-lg border border-border p-6">
               <p className="text-sm font-medium text-primary">Case 2</p>
               <p className="mt-2 font-medium text-foreground">
-                アイデア創出ワークショップで23件→781件に拡張
+                AIを活用したアイデア創出支援で量と質を大幅に向上
               </p>
               <p className="mt-2 text-sm text-muted">
-                AI活用によるアイデア拡張手法を設計し、短期間で大量の事業アイデアを創出。
+                AI活用によるアイデア創出プロセスを設計・ファシリテーションし、事業アイデアの量と質を向上。
               </p>
             </div>
           </div>
@@ -195,13 +190,11 @@ export default function LpAiPage() {
       {/* ── Founder ── */}
       <section className="bg-muted-light py-16 md:py-20">
         <Container className="mx-auto max-w-2xl text-center">
-          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-muted text-xl font-bold text-white">
-            YI
-          </div>
+          <Image src="/images/代表.jpg" alt="今井雄大" width={80} height={80} className="mx-auto h-20 w-20 rounded-full object-cover" />
           <p className="mt-4 text-lg font-bold text-foreground">今井雄大</p>
           <p className="text-sm text-muted">株式会社b-jam 代表取締役</p>
           <p className="mt-4 text-sm leading-relaxed text-muted">
-            200件超のプロジェクト支援経験を持ち、自らの業務もAIで自動化。&ldquo;語るだけでなく、作れる&rdquo;コンサルタントとして企業のAI活用を支援。
+            300件超のプロジェクト支援経験を持ち、自らの業務もAIで自動化。&ldquo;語るだけでなく、作れる&rdquo;コンサルタントとして企業のAI活用を支援。
           </p>
         </Container>
       </section>
@@ -270,7 +263,7 @@ export default function LpAiPage() {
       {/* ── Footer ── */}
       <footer className="border-t border-border py-8">
         <Container className="flex flex-col items-center gap-2 text-center text-xs text-muted sm:flex-row sm:justify-between">
-          <p>&copy; 2024 株式会社b-jam</p>
+          <p>&copy; 2026 株式会社b-jam</p>
           <Link href="/privacy" className="underline hover:text-primary">
             プライバシーポリシー
           </Link>

@@ -3,22 +3,19 @@ import Card from "@/components/ui/Card";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const stats = [
-  { value: "200+", label: "プロジェクト支援実績" },
-  { value: "3回", label: "0→1プロダクト立ち上げ" },
-  { value: "23→781件", label: "AIによるアイデア拡張" },
-  { value: "2メディア", label: "BizZine・ProductZine連載" },
+  { value: "300+", label: "プロジェクト支援実績" },
 ];
 
 const cases = [
   {
     client: "データインフラ企業",
     description:
-      "AIで初期23件のアイデアを781件に拡張、7軸自動評点で意思決定を加速",
+      "AIを活用したアイデア創出プロセスの設計・ファシリテーションで、事業アイデアの量と質を大幅に向上",
   },
   {
     client: "自社業務",
     description:
-      "HubSpot連動の営業・マーケ4パイプライン自動化を構築・運用",
+      "HubSpot連動の営業・マーケ業務自動化の仕組みを構築・運用",
   },
   {
     client: "大手企業",
@@ -33,14 +30,14 @@ export default function Results() {
       <Container>
         <SectionHeading title="実績" />
 
-        {/* Stats row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+        {/* Stats */}
+        <div className="flex justify-center mb-12">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="text-3xl sm:text-4xl font-bold text-primary">
+              <p className="text-5xl sm:text-6xl font-bold text-primary">
                 {stat.value}
               </p>
-              <p className="mt-2 text-sm text-muted">{stat.label}</p>
+              <p className="mt-3 text-base text-muted">{stat.label}</p>
             </div>
           ))}
         </div>

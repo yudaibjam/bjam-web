@@ -1,11 +1,11 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const experiences = [
-  "BizMake SaaS 企画・立ち上げ（200+プロジェクト支援）",
+  "BizMake SaaS 企画・立ち上げ（300+プロジェクト支援）",
   "株式会社bridge マネージングディレクター",
-  "BizZine・ProductZine 連載",
-  "AI自動化パイプライン設計・構築",
+  "AI業務自動化の仕組み設計・構築",
 ];
 
 export default function Profile() {
@@ -15,11 +15,15 @@ export default function Profile() {
         <SectionHeading title="代表プロフィール" />
 
         <div className="grid md:grid-cols-3 gap-10 items-start">
-          {/* Photo placeholder */}
+          {/* Photo */}
           <div className="flex justify-center md:justify-start">
-            <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl bg-gradient-to-br from-primary/10 to-muted-light border border-border flex items-center justify-center">
-              <span className="text-4xl font-bold text-primary/40">YI</span>
-            </div>
+            <Image
+              src="/images/代表.jpg"
+              alt="今井雄大 - 株式会社b-jam 代表取締役"
+              width={224}
+              height={224}
+              className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl object-cover border border-border"
+            />
           </div>
 
           {/* Bio */}

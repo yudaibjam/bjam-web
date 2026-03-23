@@ -24,7 +24,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-8 pt-6 border-t border-white/10 text-center">
           <p className="text-xs text-white/50">
-            © 2024 株式会社b-jam All Rights Reserved.
+            © 2026 株式会社b-jam All Rights Reserved.
           </p>
         </div>
       </div>

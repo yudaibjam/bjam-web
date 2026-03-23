@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Clock, ArrowRight } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
@@ -19,8 +20,8 @@ export default function LpEfficiencyPage() {
       {/* ── Simple Header ── */}
       <header className="sticky top-0 z-50 border-b border-border bg-white">
         <Container className="flex items-center justify-between py-3">
-          <Link href="/" className="text-xl font-bold text-primary">
-            b-jam
+          <Link href="/" className="flex items-center">
+            <Image src="/images/ロゴ.png" alt="b-jam" width={80} height={26} className="h-7 w-auto" />
           </Link>
           <Button as="a" href="#form" size="sm">
             無料相談を予約
@@ -167,13 +168,11 @@ export default function LpEfficiencyPage() {
       {/* ── Founder ── */}
       <section className="py-16 md:py-20">
         <Container className="mx-auto max-w-2xl text-center">
-          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-muted text-xl font-bold text-white">
-            YI
-          </div>
+          <Image src="/images/代表.jpg" alt="今井雄大" width={80} height={80} className="mx-auto h-20 w-20 rounded-full object-cover" />
           <p className="mt-4 text-lg font-bold text-foreground">今井雄大</p>
           <p className="text-sm text-muted">株式会社b-jam 代表取締役</p>
           <p className="mt-4 text-sm leading-relaxed text-muted">
-            200件超のプロジェクトで企業の業務課題を見てきました。&ldquo;仕組みで解決する&rdquo;を信条に、あなたの時間を取り戻すお手伝いをします。
+            300件超のプロジェクトで企業の業務課題を見てきました。&ldquo;仕組みで解決する&rdquo;を信条に、あなたの時間を取り戻すお手伝いをします。
           </p>
         </Container>
       </section>
@@ -244,7 +243,7 @@ export default function LpEfficiencyPage() {
       {/* ── Footer ── */}
       <footer className="border-t border-border py-8">
         <Container className="flex flex-col items-center gap-2 text-center text-xs text-muted sm:flex-row sm:justify-between">
-          <p>&copy; 2024 株式会社b-jam</p>
+          <p>&copy; 2026 株式会社b-jam</p>
           <Link href="/privacy" className="underline hover:text-primary">
             プライバシーポリシー
           </Link>

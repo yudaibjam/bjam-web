@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import ContactForm from "@/components/ContactForm";
 
@@ -15,11 +16,8 @@ export default function ContactPage() {
       <header className="sticky top-0 z-30 bg-white border-b border-border">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link
-              href="/"
-              className="text-2xl font-bold text-primary hover:text-primary-dark transition-colors"
-            >
-              b-jam
+            <Link href="/" className="flex items-center">
+              <Image src="/images/ロゴ.png" alt="b-jam" width={100} height={32} className="h-8 w-auto" priority />
             </Link>
           </div>
         </div>
@@ -49,7 +47,7 @@ export default function ContactPage() {
       <footer className="bg-foreground text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
           <p className="text-xs text-white/50">
-            © 2024 株式会社b-jam All Rights Reserved.
+            © 2026 株式会社b-jam All Rights Reserved.
           </p>
         </div>
       </footer>

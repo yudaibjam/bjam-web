@@ -126,9 +126,9 @@ export default function PrivacyPage() {
         </div>
 
         <p className="mt-12 text-sm text-[#64748b]">
-          制定日：2024年1月1日
+          制定日：2024年1月22日
           <br />
-          最終改定日：2025年3月1日
+          最終改定日：2026年4月1日
         </p>
       </div>
     </main>
