@@ -5,23 +5,77 @@ import { appendToSheet } from "@/lib/google-sheets";
 const recentSubmissions = new Map<string, number>();
 const RATE_LIMIT_MS = 60 * 1000; // 60 seconds
 
+// Field length limits
+const MAX_LENGTHS: Record<string, number> = {
+  company: 100,
+  department: 100,
+  name: 50,
+  email: 254,
+  phone: 30,
+  type: 50,
+  message: 2000,
+  source: 50,
+  utm_source: 100,
+  utm_medium: 100,
+  utm_campaign: 100,
+};
+
+// Strip HTML tags from a string
+function stripHtml(str: string): string {
+  return str.replace(/<[^>]*>/g, "");
+}
+
+// Truncate and sanitize a field value
+function sanitize(value: unknown, maxLength: number): string {
+  if (typeof value !== "string") return "";
+  return stripHtml(value).slice(0, maxLength).trim();
+}
+
+// Check if the request origin is allowed
+function isOriginAllowed(request: NextRequest): boolean {
+  const origin = request.headers.get("origin") || "";
+  const referer = request.headers.get("referer") || "";
+  const allowed = process.env.ALLOWED_ORIGIN || "https://b-jam.co.jp";
+  const allowedOrigins = [allowed, "http://localhost:3000", "http://localhost:3001"];
+
+  if (origin && allowedOrigins.some((o) => origin.startsWith(o))) return true;
+  if (referer && allowedOrigins.some((o) => referer.startsWith(o))) return true;
+  // Allow requests with no origin (e.g., server-side, curl for testing)
+  if (!origin && !referer) return true;
+
+  return false;
+}
+
 export async function POST(request: NextRequest) {
   try {
+    // Origin validation
+    if (!isOriginAllowed(request)) {
+      return NextResponse.json(
+        { error: "不正なリクエストです。" },
+        { status: 403 }
+      );
+    }
+
     const body = await request.json();
 
-    const {
-      source,
-      company,
-      department,
-      name,
-      email,
-      phone,
-      type,
-      message,
-      utm_source,
-      utm_medium,
-      utm_campaign,
-    } = body;
+    // Honeypot check: if "website" field has a value, it's a bot
+    if (body.website) {
+      // Silently return success to avoid tipping off the bot
+      return NextResponse.json({ success: true }, { status: 200 });
+    }
+
+    // Sanitize all fields
+    const source = sanitize(body.source, MAX_LENGTHS.source);
+    const company = sanitize(body.company, MAX_LENGTHS.company);
+    const department = sanitize(body.department, MAX_LENGTHS.department);
+    const name = sanitize(body.name, MAX_LENGTHS.name);
+    const email = sanitize(body.email, MAX_LENGTHS.email);
+    const phone = sanitize(body.phone, MAX_LENGTHS.phone);
+    const type = sanitize(body.type, MAX_LENGTHS.type);
+    const message = sanitize(body.message, MAX_LENGTHS.message);
+    const utm_source = sanitize(body.utm_source, MAX_LENGTHS.utm_source);
+    const utm_medium = sanitize(body.utm_medium, MAX_LENGTHS.utm_medium);
+    const utm_campaign = sanitize(body.utm_campaign, MAX_LENGTHS.utm_campaign);
 
     // Server-side validation of required fields
     if (!company || !name || !email) {
@@ -31,8 +85,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Basic email format validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
         { error: "メールアドレスの形式が正しくありません。" },
@@ -62,7 +116,7 @@ export async function POST(request: NextRequest) {
 
     // Append to Google Sheets
     await appendToSheet({
-      source: source ?? "",
+      source,
       company,
       department,
       name,

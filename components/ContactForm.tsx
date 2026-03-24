@@ -12,6 +12,7 @@ interface ContactFormInputs {
   phone?: string;
   type?: string;
   message?: string;
+  website?: string; // honeypot
 }
 
 interface ContactFormProps {
@@ -205,6 +206,18 @@ export default function ContactForm({
           }
           className={`${inputClass} resize-none`}
           {...register("message")}
+        />
+      </div>
+
+      {/* Honeypot - hidden from humans, visible to bots */}
+      <div className="absolute opacity-0 -z-10 h-0 overflow-hidden" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input
+          type="text"
+          id="website"
+          tabIndex={-1}
+          autoComplete="off"
+          {...register("website")}
         />
       </div>
 
