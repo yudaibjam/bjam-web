@@ -132,9 +132,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
     console.error("Contact form API error:", error);
-    const message = error instanceof Error ? error.message : String(error);
     return NextResponse.json(
-      { error: "送信中にエラーが発生しました。時間をおいて再度お試しください。", debug: message },
+      { error: "送信中にエラーが発生しました。時間をおいて再度お試しください。" },
       { status: 500 }
     );
   }
