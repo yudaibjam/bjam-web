@@ -43,7 +43,7 @@ export async function appendToSheet(data: FormData): Promise<void> {
 
   await sheets.spreadsheets.values.append({
     spreadsheetId: process.env.GOOGLE_SPREADSHEET_ID,
-    range: "Sheet1!A:L",
+    range: "A:L",
     valueInputOption: "RAW",
     requestBody: {
       values: [row],
