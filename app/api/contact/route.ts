@@ -36,7 +36,7 @@ function isOriginAllowed(request: NextRequest): boolean {
   const origin = request.headers.get("origin") || "";
   const referer = request.headers.get("referer") || "";
   const allowed = process.env.ALLOWED_ORIGIN || "https://b-jam.co.jp";
-  const allowedOrigins = [allowed, "http://localhost:3000", "http://localhost:3001", "https://bjamweb.vercel.app"];
+  const allowedOrigins = [allowed, "https://www.b-jam.co.jp", "https://bjamweb.vercel.app", "http://localhost:3000", "http://localhost:3001"];
 
   if (origin && allowedOrigins.some((o) => origin.startsWith(o))) return true;
   if (referer && allowedOrigins.some((o) => referer.startsWith(o))) return true;
