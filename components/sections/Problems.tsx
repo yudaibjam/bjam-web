@@ -1,11 +1,23 @@
-import { Monitor, HelpCircle, RefreshCw, Shield } from "lucide-react";
+import { Clock, Target, Users, Monitor, HelpCircle, RefreshCw, Shield } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 
 const problems = [
   {
+    icon: Clock,
+    text: "調査・資料作成・レポートに時間を取られ、判断や行動に使える時間が足りない",
+  },
+  {
+    icon: Target,
+    text: "戦略立案・企画・市場分析を、経験と勘に頼ってやっている",
+  },
+  {
+    icon: Users,
+    text: "社員一人ひとりの生産性を上げたいが、仕組みがない",
+  },
+  {
     icon: Monitor,
-    text: "Copilot・ChatGPTを契約したが、ほとんどの社員が使っていない",
+    text: "Copilot・ChatGPT・Geminiを契約したが、ほとんどの社員が使っていない",
   },
   {
     icon: HelpCircle,

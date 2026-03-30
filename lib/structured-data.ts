@@ -4,7 +4,7 @@ export function getOrganizationSchema() {
     "@type": "Organization",
     name: "株式会社b-jam",
     url: "https://b-jam.co.jp",
-    description: "AI活用で業務を変える。導入から定着まで伴走するAIコンサルティング。",
+    description: "ビジネスをジャムろう。AIとビジネスのジャムセッションで御社の成果を引き出すパートナー。",
     founder: {
       "@type": "Person",
       name: "今井雄大",

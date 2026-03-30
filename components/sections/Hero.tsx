@@ -10,10 +10,10 @@ export default function Hero() {
           {/* Text */}
           <div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-              AIを&ldquo;使える&rdquo;に変える。業務が変わる。
+              AIを&ldquo;使える&rdquo;に変える<br />業務が変わる
             </h1>
             <p className="mt-6 text-lg text-muted leading-relaxed max-w-prose">
-              ツールは導入した。でも業務は変わっていない——そんな企業に、実装から定着まで伴走します。
+              ツールは導入した。でも業務は変わっていない——<br />そんな企業に、実装から定着まで伴走します。
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button as="a" href="/diagnosis" variant="primary" size="lg">

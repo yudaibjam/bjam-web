@@ -13,16 +13,16 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   title: {
-    default: "株式会社b-jam | AIを使えるに変える。業務が変わる。",
+    default: "株式会社b-jam | ビジネスをジャムろう。",
     template: "%s | 株式会社b-jam",
   },
   description:
-    "AIツールを導入しただけで終わっていませんか？b-jamは御社の環境で業務が変わる仕組みを設計・構築し、定着まで伴走します。プロジェクト支援300件超の実績。",
+    "ビジネスをジャムろう。AIとビジネスのジャムセッションで成果を引き出すパートナー。御社の環境に合わせた設計・構築・定着まで伴走。プロジェクト支援300件超。",
   metadataBase: new URL("https://b-jam.co.jp"),
   openGraph: {
-    title: "株式会社b-jam | AIを使えるに変える。業務が変わる。",
+    title: "株式会社b-jam | ビジネスをジャムろう。",
     description:
-      "AIツールを導入しただけで終わっていませんか？b-jamは御社の環境で業務が変わる仕組みを設計・構築し、定着まで伴走します。",
+      "ビジネスをジャムろう。AIとビジネスのジャムセッションで成果を引き出すパートナー。御社の環境に合わせた設計・構築・定着まで伴走。",
     url: "https://b-jam.co.jp",
     siteName: "株式会社b-jam",
     locale: "ja_JP",
